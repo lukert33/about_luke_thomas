@@ -51,7 +51,7 @@ end
 
   {
     "number" => "140,000,000",
-    "description" => "Distance from Earth to Mars"
+    "description" => "Miles from Earth to Mars"
   }
 ].each do |args|
   Ratio.create(args)
@@ -123,7 +123,7 @@ def billboard_to_db!
     song = BillboardSong.new(week)
     saves << song.save
   end
-  p "Saved " + saves.select{|e| e == true }.count.to_s + "entries"
+  p "Saved " + saves.select{|e| e == true }.count.to_s + " entries"
 end
 
 billboard_to_db!
