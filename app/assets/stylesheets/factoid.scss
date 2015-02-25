@@ -1,0 +1,65 @@
+$gray : rgba(51,51,51, 1);
+$not-me-width : 590px;
+$button-max: 60px;
+$button-min: 60px;
+
+ul {
+  list-style-type: none;
+}
+
+.emph-frame {
+  border: 2px solid $gray;
+  padding: 2px;
+  width: $not-me-width;
+}
+
+#not-me {
+  border: 4px solid $gray;
+  padding: 30px;
+  font-family: 'Goudy Bookletter 1911', "Georgia", serif;
+
+  h1{
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.2em;
+    max-width: $not-me-width * .7;
+    margin-right: 25px;
+  }
+
+  .quote-box {
+    border-left: 2px solid red;
+    padding-left: 19px;
+    text-align: justify;
+  }
+
+  .quote-source{
+    font-weight: bolder;
+    margin-left: 30px;
+  }
+
+  .byline{
+    margin-left: 16px;
+  }
+
+  .ratio-num{
+    font-size: 1.3em;
+    color: red;
+  }
+
+  .songname{
+    margin-left: 25px;
+  }
+
+  #new-facts{
+    margin: 0 auto;
+    max-height: $button-max;
+    min-height: $button-min;
+    max-width: $button-max;
+    min-width: $button-min;
+    border: 1px solid $gray;
+    border-radius: 50px;
+  }
+
+}

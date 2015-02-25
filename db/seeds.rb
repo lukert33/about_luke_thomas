@@ -1,3 +1,4 @@
+require 'open-uri'
 #=====Quotes
 
 [
@@ -50,7 +51,7 @@ end
 
   {
     "number" => "140,000,000",
-    "description" => "Distance from Earth to Mars"
+    "description" => "Miles from Earth to Mars"
   }
 ].each do |args|
   Ratio.create(args)
@@ -58,14 +59,71 @@ end
 
 
 #Billboard Songs
-[
-  {
-    "track"=> "Crimson And Clover",
-    "artist" => "Tommy James And The Shondells",
-    "day" => "08",
-    "month" => "February",
-    "year" => "1969"
-  }
-].each do |args|
-  BillboardSong.create(args)
+
+def year_scrape(uri)
+  output = []
+  page = Nokogiri::HTML(open(uri))
+  table = page.css("div.view-content").first.css("tbody")
+
+  table.css("tr").each do |week|
+    entry = {}
+    entry[:month_day]   = week.css("span.date-display-single").text
+    entry[:track]  = week.css("td.views-field-field-chart-item-song").text
+    entry[:artist] = week.css("td.views-field-field-chart-item-artist").text
+    output << entry
+  end
+  output
 end
+
+def parse_scraped_dates(years)
+  output = []
+  years.each do |year, weeks|
+    weeks.each do |week|
+      make_date_strings!(week)
+      ready_args = {}
+      ready_args[:year] = year.to_s
+      ready_args[:day]  = week[:day].to_s
+      ready_args[:month] = week[:month].to_s
+      ready_args[:track] = week[:track].to_s
+      ready_args[:artist] = week[:artist].to_s
+      output << ready_args
+    end
+  end
+  File.open("billboard_scrape.rb", "w") do |file|
+    file << output
+  end
+  output
+end
+
+def make_date_strings!(entry)
+  string = entry[:month_day]
+  string.gsub!(/^\s+/, "")
+  string.gsub!(/\s+$/, "")
+  string.gsub!(/\n/, "")
+  dates = string.split(" ")
+  entry[:month] = dates[0]
+  entry[:day] = dates[1]
+end
+
+def scrape_billboard
+  scraped_years = {}
+  years = (1958..2013)
+  years.each do |year|
+    uri = "http://www.billboard.com/archive/charts/#{year}/hot-100"
+    scraped_years[year.to_s] = year_scrape(uri)
+  end
+  scraped_years
+end
+
+def billboard_to_db!
+  scrape = scrape_billboard
+  parsed = parse_scraped_dates(scrape)
+  saves = []
+  parsed.each do |week|
+    song = BillboardSong.new(week)
+    saves << song.save
+  end
+  p "Saved " + saves.select{|e| e == true }.count.to_s + " entries"
+end
+
+billboard_to_db!

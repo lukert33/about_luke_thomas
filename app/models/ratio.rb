@@ -1,5 +1,6 @@
 class Ratio < ActiveRecord::Base
   validates :number, :description, presence: true
+  validates :description, uniqueness: true
   before_save :build_floats
 
   include Factoid
