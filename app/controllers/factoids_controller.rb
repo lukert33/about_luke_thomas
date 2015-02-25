@@ -23,14 +23,4 @@ class FactoidsController < ApplicationController
     #admin only
   end
 
-  private
-
-  def other_rand_ratio(ratio)
-    other_ratio = Ratio.random_instance
-    until other_ratio != ratio
-      other_ratio = Ratio.random_instance
-    end
-    other_ratio
-  end
-
 end
