@@ -55,3 +55,15 @@ end
 ].each do |args|
   Ratio.create(args)
 end
+
+[
+  {
+    "track"=> "Crimson And Clover",
+    "artist" => "Tommy James And The Shondells",
+    "day" => "08",
+    "month" => "February",
+    "year" => "1969"
+  }
+].each do |args|
+  BillboardSong.create(args)
+end
