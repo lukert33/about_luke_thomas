@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(version: 20150225001202) do
   end
 
   create_table "ratios", force: :cascade do |t|
-    t.string   "number"
-    t.text     "description"
+    t.string   "number",      null: false
+    t.text     "description", null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.float    "numfloat"
