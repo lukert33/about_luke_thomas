@@ -1,10 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+#=====Quotes
 
 [
   {
@@ -38,4 +32,26 @@
   }
 ].each do |args|
   Quote.create(args)
+end
+
+
+#===== Ratios
+
+[
+  {
+    "number"=> "2,590",
+    "description"=> "% increase since 1993 in the annual sales of vinyl records in the US"
+  },
+
+  {
+    "number" => "41",
+    "description"=> "Active Wars in 1983"
+  },
+
+  {
+    "number" => "140,000,000",
+    "description" => "Distance from Earth to Mars"
+  }
+].each do |args|
+  Ratio.create(args)
 end
