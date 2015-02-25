@@ -1,26 +1,28 @@
-<div id="not-me">
+<div class="emph-frame">
+  <div id="not-me">
 
-  <h1>Not About Me</h1>
+    <h1>Not About Me</h1>
 
-  <% quote_display = "<p class='quote-box'>#{@quote.excerpt}</p><br> <h5 class='quote-source'>#{@quote.author}, from #{@quote.source}</h5>".html_safe %>
+    <% quote_display = "<p class='quote-box'>\"#{@quote.excerpt}\"</p> <h4 class='quote-source'>#{@quote.source} <br><span class='byline'> by #{@quote.author}</span></h4>".html_safe %>
 
-  <ul>
-    <% if @flip == 0 %>
-      <li><%= quote_display %> </li>
-    <% end %>
-    <% @ratios.each do |rat| %>
+    <ul>
+      <% if @flip == 0 %>
+        <li><%= quote_display %> </li>
+      <% end %>
+      <% @ratios.each do |rat| %>
+        <li>
+          <p><span class="ratio-num"><%= rat.number %></span> : <%= rat.description %></p>
+        </li>
+      <% end %>
+
       <li>
-        <p><span class="ratio-num"><%= rat.number %></span> : <%= rat.description %></p>
+        <p> Top Billboard Hit on <%= @song.month %>, <%= @song.day %>, <%= @song.year %> :<br><span class="songname">"<%= @song.track %>" by <%= @song.artist %></span></p>
       </li>
-    <% end %>
 
-    <li>
-      <p> #1 Billboard Hit on <%= @song.month %>, <%= @song.day %>, <%= @song.year %> : <span class="songname">"<%= @song.track %>" by <%= @song.artist %></span></p>
-    </li>
+      <% if @flip == 1 %>
+        <li><%= quote_display %> </li>
+      <% end %>
+    </ul>
 
-    <% if @flip == 1 %>
-      <li><%= quote_display %> </li>
-    <% end %>
-  </ul>
-
+  </div>
 </div>
