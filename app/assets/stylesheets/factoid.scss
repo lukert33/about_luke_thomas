@@ -54,12 +54,27 @@ ul {
 
   #new-facts{
     margin: 0 auto;
+    max-height: $button-max * 1.2;
+    min-height: $button-min* 1.2;
+    max-width: $button-max* 1.2;
+    min-width: $button-min* 1.2;
+  }
+
+  #new-facts button{
+    font-size: 2.4em;
+    color: red;
+    padding: 10px;
+    border-radius: 36px;
+    border: 1px solid $gray;
+    background-color: transparent;
     max-height: $button-max;
     min-height: $button-min;
     max-width: $button-max;
     min-width: $button-min;
-    border: 1px solid $gray;
-    border-radius: 50px;
+  }
+
+  #new-facts button:hover{
+    background-color: rgba(66, 255, 29, 0.52);
   }
 
 }
