@@ -1,20 +1,37 @@
+$gray : rgba(51,51,51, 1);
+
 html{
   font-family: 'Goudy Bookletter 1911', "Georgia", serif;
 }
 
 nav{
-  background-color: #333333;
+  background-color: $gray;
   position: fixed;
   width: 120%;
-  height: 68px;
+  height: 72px;
   top: 0;
   left: 0;
   z-index: 100;
 }
 
 nav img{
-  margin-top: 11px;
-  margin-left: 40px;
+  margin-left: 36px;
+  margin-top: 5px;
+  padding: 6px;
+  border: 1px solid $gray;
+  border-radius: 10px;
+}
+
+nav img:hover {
+  border: 1px solid red;
+}
+
+nav a{
+  color: transparent;
+}
+
+nav a:visited {
+  color: transparent;
 }
 
 nav h1 {
