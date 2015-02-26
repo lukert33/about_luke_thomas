@@ -1,13 +1,21 @@
 $gray : rgba(51,51,51, 1);
-$not-me-width : 500px;
-$not-me-min-height: $not-me-width * 1.1;
-$button-max: 60px;
-$button-min: 60px;
+$not-me-width : 480px;
+$not-me-min-height: $not-me-width * 1.2;
+$button-max: 70px;
+$button-min: 70px;
 
 table{
   margin: 0 auto;
   width: 90%;
   font-family: 'Goudy Bookletter 1911', "Georgia", serif;
+  position: absolute;
+  top: 80px;
+}
+
+h2{
+  text-align: center;
+  font-size: 1.8em;
+  margin-top: 50px;
 }
 
 ul {
@@ -29,19 +37,17 @@ span.separator{
   border: 4px solid $gray;
   min-height: $not-me-min-height;
   min-width: $not-me-width;
+  padding-top: 0;
 }
 
 #factoid-display {
   width: 80%;
-  min-height: $not-me-min-height * 0.9;
+  min-height: $not-me-min-height * 0.82;
   margin: 0 auto;
+  padding-top: 0;
  }
 
 #not-me {
-
-  h1{
-    text-align: center;
-  }
 
   p {
     font-size: 1.2em;
@@ -75,14 +81,17 @@ span.separator{
 }
 
 #left-pane{
-  max-width: $not-me-width * 0.6;
-  margin-right: 30px;
+  max-width: $not-me-width * 0.68;
   display: flex;
+}
+
+#right-pane{
+  padding-top: 0;
 }
 
 #me-display{
   border: 4px solid $gray;
-  padding: 30px;
+  padding: 20px;
   min-height: $not-me-min-height;
 }
 
@@ -99,14 +108,28 @@ span.separator{
   color: red;
   padding: 10px;
   border-radius: 36px;
-  border: 1px solid $gray;
+  border: 1px solid white;
   background-color: transparent;
+  transition: background-color 600s ease;
+    -webkit-transition: background-color 600ms ease;
+    -moz-transition: background-color 600ms ease;
+    -o-transition: background-color 600ms ease;
   max-height: $button-max;
   min-height: $button-min;
   max-width: $button-max;
   min-width: $button-min;
 }
 
+#new-facts button:focus {outline:0;}
+
 #new-facts button:hover{
-  background-color: rgba(66, 255, 29, 0.52);
+  background-color: rgba(66, 255, 29, 0.8);
+}
+
+#circle-arrow {
+  max-height: $button-max * 0.8;
+  min-height: $button-min* 0.8;
+  max-width: $button-max* 0.8;
+  min-width: $button-min* 0.8;
+  margin: -3px;
 }

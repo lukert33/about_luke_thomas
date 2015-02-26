@@ -1,0 +1,51 @@
+$gray : rgba(51,51,51, 1);
+
+html{
+  font-family: 'Goudy Bookletter 1911', "Georgia", serif;
+}
+
+nav{
+  background-color: $gray;
+  position: fixed;
+  width: 120%;
+  height: 72px;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+nav img{
+  margin-left: 36px;
+  margin-top: 5px;
+  padding: 6px;
+  border: 1px solid $gray;
+  border-radius: 10px;
+  transition: background-color 600s ease;
+    -webkit-transition: background-color 600ms ease;
+    -moz-transition: background-color 600ms ease;
+    -o-transition: background-color 600ms ease;
+  background-color: $gray;
+}
+
+nav img:hover {
+  background-color: red;
+}
+
+nav a{
+  color: transparent;
+}
+
+nav a:visited {
+  color: transparent;
+}
+
+nav h1 {
+  position: fixed;
+  right: 104px;
+  color: white;
+  display: inline-block;
+}
+
+#twitter{
+  margin-bottom: 4px;
+}
