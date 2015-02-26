@@ -14,6 +14,12 @@ ul {
   list-style-type: none;
 }
 
+span.separator{
+  width: 10px;
+  margin: 0 auto;
+  display: block;
+}
+
 .emph-frame{
   border: 2px solid $gray;
   padding: 2px;
