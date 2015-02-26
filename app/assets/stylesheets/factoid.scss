@@ -8,6 +8,12 @@ table{
   margin: 0 auto;
   width: 90%;
   font-family: 'Goudy Bookletter 1911', "Georgia", serif;
+  position: absolute;
+  top: 75px;
+}
+
+h2{
+  text-align: center;
 }
 
 ul {
@@ -38,10 +44,6 @@ span.separator{
  }
 
 #not-me {
-
-  h1{
-    text-align: center;
-  }
 
   p {
     font-size: 1.2em;
