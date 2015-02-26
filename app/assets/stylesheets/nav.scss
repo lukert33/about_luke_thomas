@@ -20,10 +20,15 @@ nav img{
   padding: 6px;
   border: 1px solid $gray;
   border-radius: 10px;
+  transition: background-color 600s ease;
+    -webkit-transition: background-color 600ms ease;
+    -moz-transition: background-color 600ms ease;
+    -o-transition: background-color 600ms ease;
+  background-color: $gray;
 }
 
 nav img:hover {
-  border: 1px solid red;
+  background-color: red;
 }
 
 nav a{
