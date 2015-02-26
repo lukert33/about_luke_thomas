@@ -8,7 +8,7 @@ class FactoidsController < ApplicationController
     @song     = BillboardSong.random_instance
     @flip     = rand(2)
 
-    render "index"
+    render partial: "index"
   end
 
   def new
