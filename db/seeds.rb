@@ -89,9 +89,6 @@ def parse_scraped_dates(years)
       output << ready_args
     end
   end
-  File.open("billboard_scrape.rb", "w") do |file|
-    file << output
-  end
   output
 end
 

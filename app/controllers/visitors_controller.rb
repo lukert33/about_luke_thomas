@@ -1,5 +1,4 @@
-class FactoidsController < ApplicationController
-
+class VisitorsController < ApplicationController
   def index
     @quote    = Quote.random_instance
     ratio_a   = Ratio.random_instance
@@ -7,20 +6,5 @@ class FactoidsController < ApplicationController
     @ratios   = [ratio_a, ratio_b]
     @song     = BillboardSong.random_instance
     @flip     = rand(2)
-
-    render "index"
   end
-
-  def new
-    #admin only
-  end
-
-  def create
-    #admin only
-  end
-
-  def destroy
-    #admin only
-  end
-
 end
