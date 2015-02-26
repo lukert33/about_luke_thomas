@@ -12,10 +12,18 @@ nav{
   z-index: 100;
 }
 
+nav img{
+  margin-top: 11px;
+  margin-left: 40px;
+}
 
 nav h1 {
   position: fixed;
   right: 104px;
   color: white;
   display: inline-block;
+}
+
+#twitter{
+  margin-bottom: 4px;
 }
