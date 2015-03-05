@@ -8,7 +8,7 @@ table{
   margin: 0 auto;
   width: 90%;
   font-family: 'Goudy Bookletter 1911', "Georgia", serif;
-  position: absolute;
+  position: relative;
   top: 80px;
 }
 
@@ -49,6 +49,10 @@ span.separator{
 
 #not-me {
 
+  li{
+    margin-bottom: 40px;
+  }
+
   p {
     font-size: 1.2em;
     max-width: $not-me-width * .8;
@@ -62,12 +66,12 @@ span.separator{
   }
 
   .quote-source{
-    font-weight: bolder;
     margin-left: 30px;
   }
 
   .byline{
-    margin-left: 16px;
+    font-weight: bolder;
+    font-size: 1.15em;
   }
 
   .ratio-num{
