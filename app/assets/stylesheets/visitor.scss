@@ -1,0 +1,13 @@
+@import 'bg_fade';
+
+
+#echoimg {
+  margin: 0 auto;
+  display: block;
+  @include bg-color-anim;
+  border-radius: 10px;
+}
+
+#echoimg:hover{
+  background-color: $green;
+}
