@@ -1,0 +1,10 @@
+$green: rgba(128, 217, 40, 0.96);
+$gray : rgba(51,51,51, 1);
+$red : red;
+
+@mixin bg-color-anim {
+ transition: background-color 800ms ease;
+  -webkit-transition: background-color 800ms ease;
+  -moz-transition: background-color 800ms ease;
+  -o-transition: background-color 800ms ease;
+}
