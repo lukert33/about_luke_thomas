@@ -90,8 +90,9 @@ span.separator{
 }
 
 #me-display{
+  padding: 0 34px;
+  text-align: justify;
   border: 4px solid $gray;
-  padding: 20px;
   min-height: $not-me-min-height;
 }
 
@@ -105,10 +106,9 @@ span.separator{
 
 #new-facts button{
   font-size: 2.4em;
-  color: red;
   padding: 10px;
   border-radius: 36px;
-  border: 1px solid white;
+  border: 2px solid $gray;
   background-color: transparent;
   @include bg-color-anim;
   max-height: $button-max;
@@ -128,5 +128,5 @@ span.separator{
   min-height: $button-min* 0.8;
   max-width: $button-max* 0.8;
   min-width: $button-min* 0.8;
-  margin: -3px;
+  margin: -5px;
 }
