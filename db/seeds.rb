@@ -30,9 +30,39 @@ require 'open-uri'
     "author" => "Mary Shelley",
     "excerpt" => "my dreams were all my own; I accounted for them to nobody; they were my refuge when annoyed—my dearest pleasure when free.",
     "source" => "Frankenstein, Introduction to the 1831 Edition"
+  },
+
+  {
+    "author" => "William Shakespeare",
+    "excerpt" => "In my school-days, when I had lost one shaft,\n
+      I shot his fellow of the self-same flight\n
+      The self-same way with more advised watch,\n
+      To find the other forth, and by adventuring both\n
+      I oft found both:",
+    "source" => "Bassanio, in 'The Merchant of Venice'"
+  },
+
+  {
+    "author" => "Jonathan Ive",
+    "excerpt" => "I had a sense of the values of the people who made it.",
+    "source" => "In 'The New Yorker', reflecting on his first use of a Mac"
+  },
+
+  {
+    "author" => "Bertrand Russell",
+    "excerpt" => "I said [Wittgenstein] was mad and he said God preserve me from sanity. (God certainly will.)",
+    "source" => "Russell's 1913 correspondence with a friend"
+  },
+
+  {
+    "author"=>"Edgar Allen Poe",
+    "excerpt"=> "There is reason, it is said, in the roasting of eggs, and there is philosophy even in furniture — a philosophy nevertheless which seems to be more imperfectly understood by Americans than by any civilized nation upon the face of the earth.",
+    "source"=>"The Philosophy of Furniture"
   }
 ].each do |args|
-  Quote.create(args)
+  q = Quote.new(args)
+  q.guest_token = "germinate"
+  q.save
 end
 
 
@@ -52,6 +82,41 @@ end
   {
     "number" => "140,000,000",
     "description" => "Miles from Earth to Mars"
+  },
+
+  {
+    "number" => "80,0000",
+    "description" => "Age, in years, of 'Pando', a Quaking Aspen tree in Utah"
+  },
+
+  {
+    "number" => "10,000",
+    "description" => "Est. frequency of reproduction, in years, of endolithic microorganisms, living 1.5 miles beneath the ocean floor"
+  },
+
+  {
+    "number" => "65",
+    "description" => "Number of countries involved in wars on March 3, 2015",
+  },
+
+  {
+    "number" => "615",
+    "description" => "Number Militias-guerrillas and separatist groups involved in wars on March 3, 2015"
+  },
+
+  {
+    "number"=> "53,891",
+    "description"=> "Median annual US household income as of June 2014, in USD"
+  },
+
+  {
+    "number"=>"781",
+    "description"=> "Median annual Liberian household income as of Dec 2013, in USD"
+  },
+
+  {
+    "number"=>"9,733",
+    "description"=>"Worldwide median annual household income as of Dec 2013, in USD"
   }
 ].each do |args|
   Ratio.create(args)
@@ -104,7 +169,7 @@ end
 
 def scrape_billboard
   scraped_years = {}
-  years = (1958..2013)
+  years = (1958..2014)
   years.each do |year|
     uri = "http://www.billboard.com/archive/charts/#{year}/hot-100"
     scraped_years[year.to_s] = year_scrape(uri)
