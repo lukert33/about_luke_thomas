@@ -36,13 +36,28 @@ nav a:visited {
   color: transparent;
 }
 
+#twitter{
+  margin-bottom: 4px;
+}
+
 nav h1 {
   position: fixed;
   right: 104px;
   color: white;
   display: inline-block;
+  padding: 8px 12px;
+  border-radius: 10px;
+  top: -8px;
+  border: 1px solid white;
+  @include bg-color-anim;
+  @include font-color-anim;
 }
 
-#twitter{
-  margin-bottom: 4px;
+#home-link h1{
+  background-color: $gray;
+}
+
+#home-link:hover h1{
+  background-color: $green;
+  color: $gray;
 }
