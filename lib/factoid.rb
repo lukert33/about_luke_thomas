@@ -6,8 +6,7 @@ module Factoid
 
   module ClassMethods
     def random_instance
-      i = rand(1..self.count)
-      self.find(i)
+      self.all.sample
     end
   end
 
