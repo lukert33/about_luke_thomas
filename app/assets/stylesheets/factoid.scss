@@ -1,4 +1,4 @@
-$gray : rgba(51,51,51, 1);
+@import "bg_fade";
 $not-me-width : 480px;
 $not-me-min-height: $not-me-width * 1.2;
 $button-max: 70px;
@@ -56,7 +56,7 @@ span.separator{
   }
 
   .quote-box {
-    border-left: 2px solid red;
+    border-left: 2px solid $red;
     padding-left: 19px;
     text-align: justify;
   }
@@ -72,7 +72,7 @@ span.separator{
 
   .ratio-num{
     font-size: 1.3em;
-    color: red;
+    color: $red;
   }
 
   .songname{
@@ -110,10 +110,7 @@ span.separator{
   border-radius: 36px;
   border: 1px solid white;
   background-color: transparent;
-  transition: background-color 600s ease;
-    -webkit-transition: background-color 600ms ease;
-    -moz-transition: background-color 600ms ease;
-    -o-transition: background-color 600ms ease;
+  @include bg-color-anim;
   max-height: $button-max;
   min-height: $button-min;
   max-width: $button-max;
@@ -123,7 +120,7 @@ span.separator{
 #new-facts button:focus {outline:0;}
 
 #new-facts button:hover{
-  background-color: rgba(66, 255, 29, 0.8);
+  background-color: $green;
 }
 
 #circle-arrow {
