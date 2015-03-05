@@ -2,7 +2,7 @@
 
   <h2>Not About Me</h2>
 
-  <% quote_display = "<p class='quote-box'>\"#{@quote.excerpt}\"</p> <h4 class='quote-source'>#{@quote.source} <br><span class='byline'> by #{@quote.author}</span></h4>".html_safe %>
+  <% quote_display = "<p class='quote-box'>\"#{@quote.excerpt}\"</p> <h4 class='quote-source'> <span class='byline'> #{@quote.author},</span><br> #{@quote.source}</h4>".html_safe %>
 
   <ul>
     <% if @flip == 0 %>
