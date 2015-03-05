@@ -1,0 +1,30 @@
+<div class="full-form">
+  <div class="emph-frame">
+    <div id="form-frame">
+
+      <div id="factoid-submit">
+        <h2>Please Contribute to the Information</h2>
+
+        <div class="save-errors">
+          <% if !@quote.errors.messages.empty? %>
+          <h3>There was an error when trying to save your submission:</h3>
+            <ul>
+              <% @quote.errors.messages.each do |field, msg| %>
+                <li> <%= field.capitalize %> : <%= msg.join(", ")%> </li>
+              <% end %>
+            </ul>
+          <% end %>
+        </div>
+
+        <%= form_for @quote do |f| %>
+          <p>Guest Passphrase:</p> <%= f.text_field :guest_token %>
+          <p>Author:</p> <%= f.text_field :author %>
+          <p>Quotation:</p> <%= f.text_area :excerpt %>
+          <p>Name of Source Text:</p> <%= f.text_field :source %>
+            <%= f.submit "Submit", :class => "fact-submit" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
