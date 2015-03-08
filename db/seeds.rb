@@ -50,7 +50,7 @@ require 'open-uri'
 
   {
     "author" => "Bertrand Russell",
-    "excerpt" => "I said [Wittgenstein] was mad and he said God preserve me from sanity. (God certainly will.)",
+    "excerpt" => "I said [Wittgenstein] was mad and he said, 'God preserve me from sanity.' (God certainly will.)",
     "source" => "Russell's 1913 correspondence with a friend"
   },
 
@@ -58,6 +58,17 @@ require 'open-uri'
     "author"=>"Edgar Allen Poe",
     "excerpt"=> "There is reason, it is said, in the roasting of eggs, and there is philosophy even in furniture — a philosophy nevertheless which seems to be more imperfectly understood by Americans than by any civilized nation upon the face of the earth.",
     "source"=>"The Philosophy of Furniture"
+  },
+
+  {
+    "author" => "W.H. Auden",
+    "excerpt" => "not, please! to resemble
+      The beasts who repeat themselves, or a thing like water
+      Or stone whose conduct can be predicted, these
+      Are our common prayer, whose greatest comfort is music
+      Which can be made anywhere, is invisible,
+      And does not smell.",
+    "source" => "\"In Praise of Limestone\""
   }
 ].each do |args|
   q = Quote.new(args)
@@ -117,6 +128,16 @@ end
   {
     "number"=>"9,733",
     "description"=>"Worldwide median annual household income as of Dec 2013, in USD"
+  },
+
+  {
+    "number"=>"3:1",
+    "description"=> "Height of Olympus Mons relative to height of Mount Everest"
+  },
+
+  {
+    "number"=>"2,305,800",
+    "description"=>"Average cubic feet of water that flow over Victoria Falls each minute."
   }
 ].each do |args|
   Ratio.create(args)
