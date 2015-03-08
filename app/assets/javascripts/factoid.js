@@ -6,13 +6,13 @@ $(document).ready(function(){
     $("body").on("click", "#new-facts button", function(event){
       event.preventDefault();
       refreshable = false;
-      $("#new-facts").attr("style", "");
+      $("#circle-arrow").attr("style", "");
 
       $.ajax({
         url: "/factoids",
         type: "get"
       }).always(function(){
-        $("#new-facts").transition({
+        $("#circle-arrow").transition({
           rotate: '360deg',
           duration: 600
         });
