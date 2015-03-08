@@ -62,11 +62,11 @@ require 'open-uri'
 
   {
     "author" => "W.H. Auden",
-    "excerpt" => "not, please! to resemble
-      The beasts who repeat themselves, or a thing like water
-      Or stone whose conduct can be predicted, these
-      Are our common prayer, whose greatest comfort is music
-      Which can be made anywhere, is invisible,
+    "excerpt" => "not, please! to resemble\n
+      The beasts who repeat themselves, or a thing like water\n
+      Or stone whose conduct can be predicted, these\n
+      Are our common prayer, whose greatest comfort is music\n
+      Which can be made anywhere, is invisible,\n
       And does not smell.",
     "source" => "\"In Praise of Limestone\""
   }
