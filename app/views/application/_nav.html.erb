@@ -1,7 +1,4 @@
 <nav>
-  <%= link_to root_path, :id => "home-link" do |l| %>
-    <h1>Luke Thomas</h1>
-  <% end %>
 
   <div id="nav-imgs">
     <a href="https://www.linkedin.com/pub/luke-thomas/19/5b6/22a">
@@ -15,5 +12,15 @@
       <%= image_tag("Twitter-white.png", id:"twitter") %>
     </a>
   <div id="nav-imgs">
+
+  <div id="flasher">
+    <% if flash[:notice] %>
+      <h1><%= flash[:notice] %><div></div></h1>
+    <% end %>
+  </div>
+
+  <%= link_to root_path, :id => "home-link" do |l| %>
+    <h1>Luke Thomas</h1>
+  <% end %>
 </nav>
 
