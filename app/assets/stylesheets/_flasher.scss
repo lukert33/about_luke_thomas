@@ -1,0 +1,80 @@
+$green: rgba(128, 217, 40, 0.96);
+
+@-webkit-keyframes flashInOut {
+    0%   {opacity: 0;}
+    60%  {opacity: 1;color: white;}
+    76%  {opacity: 1; color: $green;}
+    81%  {color: white;}
+    100% {opacity: 0;}
+}
+
+@-moz-keyframes flashInOut {
+    0%   {opacity: 0;}
+    60%  {opacity: 1;color: white;}
+    76%  {opacity: 1; color: $green;}
+    81%  {color: white;}
+    100% {opacity: 0;}
+}
+
+@keyframes flashInOut {
+    0%   {opacity: 0;}
+    60%  {opacity: 1;color: white;}
+    76%  {opacity: 1; color: $green;}
+    81%  {color: white;}
+    100% {opacity: 0;}
+}
+
+@mixin load-flash {
+ opacity:0;
+ -webkit-animation:flashInOut ease-in 1;
+ -moz-animation:flashInOut ease-in 1;
+ animation:flashInOut ease-in 1;
+
+ -webkit-animation-fill-mode:forwards;
+ -moz-animation-fill-mode:forwards;
+ animation-fill-mode:forwards;
+
+ -webkit-animation-duration:1.9s;
+ -moz-animation-duration:1.9s;
+ animation-duration:1.9s;
+
+ -webkit-animation-delay: 0s;
+ -moz-animation-delay:0s;
+ animation-delay: 0s;
+}
+
+@-webkit-keyframes flashUnderline {
+    0%   {width: 0;}
+    60%  {width: 70px; right: 30%;}
+    100% {width: 0; right:30%;}
+}
+
+@-moz-keyframes flashUnderline {
+    0%   {width: 0;}
+    60%  {width: 70px; right: 30%;}
+    100% {width: 0; right:30%;}
+}
+
+@keyframes flashUnderline {
+    0%   {width: 0;}
+    60%  {width: 70px; right: 30%;}
+    100% {width: 0; right:30%;}
+}
+
+@mixin streak {
+  -webkit-animation: flashUnderline ease-in 1;
+  -moz-animation:flashUnderline ease-in 1;
+  animation:flashUnderline ease-in 1;
+
+  -webkit-animation-duration:1.2s;
+  -moz-animation-duration:1.2s;
+  animation-duration:1.2s;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay:0s;
+  animation-delay: 0s;
+}
