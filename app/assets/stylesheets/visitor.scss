@@ -5,6 +5,7 @@
   display: block;
   @include bg-color-anim;
   border-radius: 10px;
+  padding: 5px;
 }
 
 #echoimg:hover{
