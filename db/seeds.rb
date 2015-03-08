@@ -38,7 +38,7 @@ require 'open-uri'
       I shot his fellow of the self-same flight\n
       The self-same way with more advised watch,\n
       To find the other forth, and by adventuring both\n
-      I oft found both:",
+      I oft found both",
     "source" => "Bassanio, in 'The Merchant of Venice'"
   },
 
@@ -62,12 +62,7 @@ require 'open-uri'
 
   {
     "author" => "W.H. Auden",
-    "excerpt" => "not, please! to resemble\n
-      The beasts who repeat themselves, or a thing like water\n
-      Or stone whose conduct can be predicted, these\n
-      Are our common prayer, whose greatest comfort is music\n
-      Which can be made anywhere, is invisible,\n
-      And does not smell.",
+    "excerpt" => "not, please! to resemble\n The beasts who repeat themselves, or a thing like water\n Or stone whose conduct can be predicted, these\n Are our common prayer, whose greatest comfort is music\n Which can be made anywhere, is invisible,\n And does not smell.",
     "source" => "\"In Praise of Limestone\""
   }
 ].each do |args|
