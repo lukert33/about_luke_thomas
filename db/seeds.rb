@@ -58,13 +58,8 @@ require 'open-uri'
     "author"=>"Edgar Allen Poe",
     "excerpt"=> "There is reason, it is said, in the roasting of eggs, and there is philosophy even in furniture — a philosophy nevertheless which seems to be more imperfectly understood by Americans than by any civilized nation upon the face of the earth.",
     "source"=>"The Philosophy of Furniture"
-  },
-
-  {
-    "author" => "W.H. Auden",
-    "excerpt" => "not, please! to resemble\n The beasts who repeat themselves, or a thing like water\n Or stone whose conduct can be predicted, these\n Are our common prayer, whose greatest comfort is music\n Which can be made anywhere, is invisible,\n And does not smell.",
-    "source" => "\"In Praise of Limestone\""
   }
+
 ].each do |args|
   q = Quote.new(args)
   q.guest_token = "germinate"
