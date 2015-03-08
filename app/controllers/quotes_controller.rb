@@ -7,6 +7,7 @@ class QuotesController < ApplicationController
   def create
     @quote = Quote.new(quote_params)
     if @quote.save
+      flash[:notice] = "Thank you"
       redirect_to root_path
     else
       render "new"
